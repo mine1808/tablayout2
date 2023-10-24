@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LoginFragment"
+    android:background="?android:attr/colorPressedHighlight">
+
+
+<!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:id="@+id/textlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Login"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="#1E293B"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usernamelogin"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textlogin"
+            app:cardCornerRadius="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="35dp">
+
+            <EditText
+                android:id="@+id/edit_usernamelogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Username"
+                android:inputType="textPassword"
+                android:fontFamily="@font/poppinsmedium"
+                android:textColor="@color/black"
+                android:textColorHint="#828282"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/passwordlogin"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usernamelogin"
+            app:cardCornerRadius="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/edit_passwordlogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:fontFamily="@font/poppinsmedium"
+                android:textColor="@color/black"
+                android:textColorHint="#828282"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/forgotPasswordLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordlogin">
+
+            <CheckBox
+                android:id="@+id/remember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Remember Me"
+                android:textColor="#1E293B"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/forgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="100dp"
+                android:text="Forgot Password?"
+                android:textColor="#525BFF"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#525BFF"
+            android:text="Login"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forgotPasswordLayout" />
+
+        <LinearLayout
+            android:id="@+id/newmemberregisterlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/newmember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New member?"
+                android:textColor="#1E293B"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/registernew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textColor="#525BFF"
+                android:textSize="12sp"
+                android:paddingStart="5dp"/>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
